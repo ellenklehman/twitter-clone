@@ -14,14 +14,11 @@
 </ul></td><br>
 <td>
 <ul>
-  <%= paginate @tweets %>
+
+
   <br>
-  <% for following in @tweets%>
-    Tweets from : <%=h following.followed.email %>
-    <% following.followed.tweets.each do |tweet| %>
-      <br>
-      <%= tweet.content %>
-    <% end %><br>
+  <% for tweet in @tweets%>
+     <br> <strong><%= tweet.content %></strong> TWEETED BY: <%= tweet.user.email %>
   <% end %>
 </ul></td></tr></table>
 

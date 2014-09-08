@@ -17,4 +17,17 @@ class User < ActiveRecord::Base
   def send_signup_email
     UserMailer.signup_confirmation(self).deliver
   end
+
+  def tweets_of_followers
+    tweets = []
+    self.followings.map { |following| following.followed }.each do |user|
+      user.tweets.each { |tweet| tweets << tweet }
+    end
+    tweets
+
+    # @all_tweets = @user_tweets.map { |user| user.tweets}.flatten
+    # @each_tweet = @all_tweets.map { |tweet| tweet.content}.flatten
+    # @every_tweet = @each_tweet
+  end
+
 end
