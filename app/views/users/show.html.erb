@@ -1,0 +1,23 @@
+<p>
+  <strong>User:</strong>
+  <%= current_user.email %><br/>
+</p>
+
+<ul>
+  <% for following in @user.followings %>
+    <li>Following:
+      <%=h following.followed.email %>
+      (<%= link_to "remove", following, :method => :delete %>)
+    </li>
+  <% end %>
+</ul>
+
+<p><%= link_to "Find Followers", users_path %></p>
+
+
+<h3>Following You:</h3>
+  <ul>
+    <% for user in @user.inverse_followings %>
+      <li><%=h user.user_email %></li>
+    <% end %>
+  </ul>

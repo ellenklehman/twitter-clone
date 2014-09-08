@@ -1,0 +1,7 @@
+<%= form_for @tweet, :url => user_tweets_path, :html => { :multipart => true } do |f| %>
+  <div class="form-group">
+    <%= f.label :content %>
+    <%= f.text_field :content %>
+  </div>
+  <%= f.submit(:class => "btn btn-primary") %>
+<% end %>

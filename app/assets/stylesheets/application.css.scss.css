@@ -1,0 +1,49 @@
+@import "bootstrap";
+
+/* universal */
+
+.container {
+  width: 1100px;
+  margin: 0 auto;
+  }
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  background-color: #E8E8E3;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.navbar-custom {
+    background-color: #9933CC;
+    color: #FF7011;
+    border-radius:0;
+}
+
+
+.navbar-custom .navbar-nav > li > a {
+    color: black;
+    font-weight: bold;
+}
+
+.navbar-custom .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
+    color: black;
+    background-color:transparent;
+}
+
+tbody tr .vote {
+  padding-bottom: 20px;
+}
+
+tr a {
+  color: black;
+}
