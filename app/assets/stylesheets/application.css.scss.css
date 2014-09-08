@@ -30,7 +30,7 @@ textarea {
 }
 
 
-.navbar-custom .navbar-nav > li > a {
+.navbar-custom .navbar-nav > p > a {
     color: black;
     font-weight: bold;
 }

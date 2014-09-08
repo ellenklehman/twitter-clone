@@ -14,6 +14,7 @@ gem 'bcrypt'
 gem 'textacular', '~> 3.0'
 gem 'devise'
 gem 'pry'
+gem 'kaminari'
 
 group :production do
   gem 'rails_12factor'
