@@ -13,18 +13,18 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-  def create
-    @user = User.new(user_params)
-    if @user.save
-      binding.pry
-      UserMailer.signup_confirmation(@user).deliver
-      session[:user_id] = @user.id
-      flash[:notice] = "User was added"
-      redirect_to session_user_path(session, @user)
-    else
-      render 'new'
-    end
-  end
+  # def create
+  #   @user = User.new(user_params)
+  #   if @user.save
+  #     binding.pry
+  #     UserMailer.signup_confirmation(@user).deliver
+  #     session[:user_id] = @user.id
+  #     flash[:notice] = "User was added"
+  #     redirect_to session_user_path(session, @user)
+  #   else
+  #     render 'new'
+  #   end
+  # end the devise controller is in effect
 
   def edit
     @user = User.find(params[:id])
