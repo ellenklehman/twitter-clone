@@ -14,7 +14,9 @@
 </ul></td><br>
 <td>
 <ul>
-  <% for following in @user.followings %>
+  <%= paginate @tweets %>
+  <br>
+  <% for following in @tweets%>
     Tweets from : <%=h following.followed.email %>
     <% following.followed.tweets.each do |tweet| %>
       <br>
